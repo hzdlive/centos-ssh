@@ -21,12 +21,6 @@ RUN service sshd start
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-RUN rm -f /etc/bashrc
-ADD files/color_prompt /etc/color_prompt
-ADD files/bashrc /etc/bashrc
-ADD files/.bashrc /root/.bashrc
-ADD files/.bash_profile /root/.bash_profile
-
 RUN yum clean all
 
 EXPOSE 22
