@@ -7,6 +7,7 @@ FROM centos:6.8
 RUN yum update -y && \
     yum install -y epel-release && \
     yum install -y openssh-server openssh-clients python-setuptools && \
+    yum install -y git wget && \
     yum clean all && \
     easy_install supervisor && \
     mkdir /var/run/sshd
