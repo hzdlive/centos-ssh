@@ -26,7 +26,7 @@ RUN git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
 RUN git clone https://github.com/snooda/net-speeder.git
 RUN wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN wget https://github.com/xtaci/kcptun/releases/download/v20161222/kcptun-linux-amd64-20161222.tar.gz
-RUN rpm -ivh epel-release-6-8.noarch.rpm
+#RUN rpm -ivh epel-release-6-8.noarch.rpm
 RUN yum install -y libnet libpcap libnet-devel libpcap-devel gcc
 
 RUN yum clean all
