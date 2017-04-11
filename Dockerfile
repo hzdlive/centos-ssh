@@ -10,6 +10,7 @@ RUN yum update -y && \
     yum install -y git wget && \
 #    yum clean all && \
     easy_install supervisor && \
+    yum install -y libnet libpcap libnet-devel libpcap-devel gcc m2crypto && \
     mkdir /var/run/sshd
 
 RUN echo 'root:password' | chpasswd
