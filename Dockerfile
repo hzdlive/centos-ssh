@@ -25,9 +25,5 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 RUN yum clean all
 
-ADD cmd.sh /root/cmd.sh
-RUN chmod +x /root/cmd.sh
-
 EXPOSE 22
-
 CMD /usr/sbin/sshd -D
